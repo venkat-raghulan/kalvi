@@ -6,17 +6,19 @@ let clicked = false;
 let navbartoggle = () => {
   {
     navLinksHolder.classList.toggle("nav-clicked");
-    disableScroll();
+
     // body.classList.toggle("body-overflow");
     clicked = !clicked;
     if (clicked) {
       overlay.style.display = "block";
       burger.innerHTML =
         '<img id="burger-image" src="./assets/x.svg" alt="burger-image">';
+      disableScroll();
     } else {
       overlay.style.display = "none";
       burger.innerHTML =
         '<img id="burger-image" src="./assets/menu.svg" alt="burger-image">';
+      enableScroll();
     }
 
     navLinks.forEach((element, index) => {
