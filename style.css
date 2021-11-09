@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Source+Sans+Pro:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #ffffff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content {
+    min-height: calc(100vh - 80px);
+    overflow-x: hidden;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.nav-links li a:active {
+    color: #F53333;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 116px;
+}
+
+.nav-links li {
+    margin-left: 64px;
+}
+
+.burger {
+    display: none;
+    z-index: 2;
+}
+
+.logo {
+    height: 36px;
+    cursor: pointer;
+    margin-left: 116px;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 40%;
+    display: none;
+}
+
+/* #hero-bg {
+    display: block;
+    overflow: hidden;
+}
+
+#hero-bg video {
+    height: 100%;
+    width: 177.77777778vh;
+    min-width: 100%;
+    min-height: 56.25vw;
+} */
+
+#philosophy-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    background-color: #F5F5F5;
+    overflow: hidden;
+    /* width: 100%;
+    min-width: auto;
+    max-width: 100%; */
+    height: 264px;
+}
+
+#philosophy-main h2 {
+    margin-left: 116px;
+    align-self: center;
+}
+
+#philosophy-main img {
+    height: 90%;
+    width: auto;
+    margin-right: 116px;
+    align-self: flex-end;
+    padding-top: 32px;
+}
+
+
+h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 1.313rem;
+    font-weight: 400;
+}
+
+#philosophy-details {
+    margin: 6rem 22.5%;
+}
+
+#philosophy-details {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.small-para {
+    margin: 4rem 0;
+}
+
+.gradient-div {
+    background: linear-gradient(0deg, var(--color1) 0%, var(--color2) 100%);
+    border-radius: 4px;
+    color: white;
+    padding: 32px;
+    margin: 5px;
+}
+
+.gradient-div>* {
+    margin: 0.6rem;
+}
+
+.gradient-purple {
+    --color1: #611BB6;
+    --color2: #9D60E7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 320px;
+    max-width: 250px;
+
+}
+
+.gradient-red {
+    --color1: #F53333;
+    --color2: #F75858;
+    width: 384px;
+    height: 384px;
+}
+
+.white-circle {
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.gradient-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gradient-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.125rem;
+}
+
+#team-page-details {
+    margin: 6rem 22.5%;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.team-large-para {
+    margin: 3rem 0;
+    /*ps*/
+}
+
+.team-small-para>a {
+    color: #1b5ef5;
+}
+
+.team-sub-heading {
+    margin: 4rem 0 1rem 0;
+    font-weight: 800;
+    font-family: "Montserrat", Sans-serif;
+}
+
+.team-members-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flext-start;
+    flex-wrap: wrap;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.member-card>a {
+    text-decoration: none;
+}
+
+.name-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
+}
+
+.member-image {
+    width: 250px;
+    height: auto;
+}
+
+.linkedin-image {
+    width: auto;
+    height: 25px;
+}
+
+.member-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #141414;
+}
+
+.member-tags {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    color: #707070;
+}
+
+
+.mailing-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    padding: 96px 16px;
+}
+
+.mailing-list>h2 {
+    color: white;
+    text-align: center;
+}
+
+.email-form {
+    padding-top: 32px;
+    font-family: "Source Sans Pro", Arial;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.email-form>input {
+    margin: auto;
+    padding: 16px 32px;
+    border-radius: 4px 0px 0px 4px;
+    border: 1px solid #707070;
+    width: 300px;
+    font-size: 1rem;
+    color: rgba(20, 20, 20);
+
+}
+
+.email-form>input:focus {
+    outline: none;
+    border: 1px solid #1b5ef5;
+}
+
+.email-form> ::placeholder {
+    color: rgba(20, 20, 20, 0.38);
+}
+
+.email-submit {
+    margin: auto;
+    padding: 16px 32px;
+    background: #1b5ef5;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.email-submit:hover {
+    background: #0a4bdf;
+    cursor: pointer;
+}
+
+.footer {
+    height: auto;
+    background-color: white;
+    display: flex;
+    margin: 6rem 0;
+    font-family: "Source Sans Pro", Sans-serif;
+    align-items: flex-start;
+    color: #141414;
+}
+
+.footer .logo {
+    justify-self: flex-start;
+    width: auto;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 116px;
+    width: auto;
+    flex-grow: 1;
+}
+
+.footer-group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+}
+
+.footer-group>* {
+    margin-bottom: 1rem;
+}
+
+.footer-group a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#footer-label {
+    font-weight: 700;
+    color: #707070;
+}
+
+.copyright-label {
+    text-align: center;
+    font-family: "Source Sans Pro", Sans-serif;
+    color: #707070;
+    margin-bottom: 0.5rem;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 2rem;
+
+    }
+
+    h2 {
+        font-size: 2rem;
+
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h6 {
+        font-size: 1.1875rem;
+    }
+
+    .burger {
+        display: block;
+        margin-right: 16px;
+    }
+
+    .logo {
+        margin-left: 16px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        height: 100vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        transform: translateX(100%);
+        width: 242px;
+        transition: transform 0.5s ease;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .nav-links li {
+        opacity: 0%;
+        margin: 32px;
+    }
+
+    .nav-links li a {
+        font-size: 1.6rem;
+    }
+
+    #philosophy-main {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #philosophy-main img {
+        margin-right: 16px;
+        height: auto;
+        width: 50%;
+        align-self: flex-end;
+    }
+
+    #philosophy-main h2 {
+        margin-left: 16px;
+        align-self: flex-start;
+        padding-top: 32px;
+    }
+
+    #philosophy-details {
+        margin: 0 16px;
+    }
+
+    .small-para {
+        margin: 2rem 0;
+    }
+
+    .gradient-div {
+        padding: 16px;
+        margin: 8px;
+    }
+
+
+    .gradient-purple {
+        max-width: 320px;
+    }
+
+    .gradient-red {
+        width: 100%;
+        height: 350px;
+    }
+
+    .white-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        font-size: 1.1875rem;
+        margin-bottom: 1rem;
+    }
+
+    .gradient-text {
+        font-family: "Source Sans Pro", sans-serif;
+        margin-top: 0.5rem;
+    }
+
+    #team-page-details {
+        margin: 4rem 16px;
+        font-family: "Source Sans Pro", sans-serif;
+    }
+
+    .team-large-para {
+        margin: 2rem 0;
+    }
+
+    .team-sub-heading {
+        margin: 2rem 0 1rem 0;
+    }
+
+    .member-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .mailing-list {
+        padding: 64px 16px;
+        align-items: stretch;
+    }
+
+    .email-form {
+        flex-direction: column;
+    }
+
+    .email-form>input {
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .email-submit {
+        padding: 16px 0;
+        margin-top: 16px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .footer {
+        margin: 4rem 0;
+        flex-direction: Column;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-right: 16px;
+    }
+
+    .footer-group {
+        margin-left: 1rem;
+        margin-top: 4rem;
+    }
+}
+
+.nav-clicked {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
