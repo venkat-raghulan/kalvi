@@ -21,6 +21,9 @@ let navbartoggle = () => {
       enableScroll();
     }
 
+    if (overlay.style.animation) overlay.style.animation = "";
+    else overlay.style.animation = "overlaywidth 0.5s ease forwards";
+
     navLinks.forEach((element, index) => {
       if (element.style.animation) {
         element.style.animation = "";
