@@ -28,7 +28,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    z-index: 4;
 }
 
 .content {
@@ -37,6 +36,7 @@ nav {
     left: 0;
     min-height: calc(100vh - 80px);
     overflow-x: hidden;
+    z-index: -1;
 }
 
 .nav-links li a {
@@ -78,11 +78,61 @@ nav {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw - 242px);
     background-color: black;
     opacity: 40%;
     display: none;
+    /* animation-name: overlaywidth;
+    animation-duration: 0.5s; */
     z-index: 2;
+}
+
+.accordion-section {
+    display: flex;
+}
+
+.accordion-section>img {
+    margin-left: 116px;
+    width: 400px;
+
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    /* transition: 0.4s; */
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    /* transition: max-height 0.2s ease-out; */
 }
 
 /* #hero-bg {
@@ -101,29 +151,28 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
     background-color: #F5F5F5;
     overflow: hidden;
-    /* width: 100%;
-    min-width: auto;
-    max-width: 100%; */
     height: 264px;
 }
 
-#philosophy-main h2 {
+#philosophy-main h1 {
     margin-left: 116px;
     align-self: center;
 }
 
 #philosophy-main img {
-    height: 90%;
+    height: 100%;
     width: auto;
     margin-right: 116px;
     align-self: flex-end;
     padding-top: 32px;
 }
 
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
 
 h2 {
     font-size: 3rem;
@@ -142,10 +191,7 @@ h6 {
 
 #philosophy-details {
     margin: 6rem 22.5%;
-}
-
-#philosophy-details {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .small-para {
@@ -157,11 +203,12 @@ h6 {
     border-radius: 4px;
     color: white;
     padding: 32px;
-    margin: 5px;
+    margin: 16px;
 }
 
-.gradient-div>* {
-    margin: 0.6rem;
+.gradient-div>h6 {
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 700;
 }
 
 .gradient-purple {
@@ -178,8 +225,8 @@ h6 {
 .gradient-red {
     --color1: #F53333;
     --color2: #F75858;
-    width: 384px;
-    height: 384px;
+    width: 350px;
+    height: 350px;
 }
 
 .white-circle {
@@ -190,11 +237,15 @@ h6 {
     height: 3rem;
     line-height: 3rem;
     text-align: center;
+    font-weight: 700;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 1.313rem;
+    margin-bottom: 2rem;
 }
 
 .gradient-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -202,6 +253,7 @@ h6 {
 .gradient-text {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.125rem;
+    margin-top: 1rem;
 }
 
 #team-page-details {
@@ -425,7 +477,7 @@ h6 {
         right: 0;
         overflow: hidden;
         min-height: -webkit-fill-available;
-        min-height: calc(100vh-80px);
+        min-height: 100vh;
         background-color: #ffffff;
         display: flex;
         flex-direction: column;
@@ -433,7 +485,7 @@ h6 {
         align-items: flex-start;
         transform: translateX(100%);
         width: 242px;
-        transition: transform 0.5s ease;
+        /* transition: transform 0.5s ease; */
         margin: 0;
         z-index: 3;
     }
@@ -444,12 +496,15 @@ h6 {
     }
 
     .nav-links li a {
-        font-size: 1.6rem;
+        font-size: 1rem;
+    }
+
+    .accordion-section>img {
+        display: none;
     }
 
     #philosophy-main {
         height: auto;
-        width: 100%;
         flex-direction: column;
     }
 
@@ -460,14 +515,14 @@ h6 {
         align-self: flex-end;
     }
 
-    #philosophy-main h2 {
+    #philosophy-main h1 {
         margin-left: 16px;
         align-self: flex-start;
         padding-top: 32px;
     }
 
     #philosophy-details {
-        margin: 0 16px;
+        margin: 4rem 16px;
     }
 
     .small-para {
@@ -481,7 +536,7 @@ h6 {
 
 
     .gradient-purple {
-        max-width: 320px;
+        width: 100%;
     }
 
     .gradient-red {
@@ -571,5 +626,15 @@ h6 {
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@keyframes overlaywidth {
+    from {
+        width: 100vw;
+    }
+
+    to {
+        width: calc(100vw - 242px);
     }
 }
